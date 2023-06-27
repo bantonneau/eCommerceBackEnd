@@ -10,6 +10,46 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    product_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    price: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      validate: {
+        isDecimal: function(value) {
+          if(typeof value !== 'number' || value % 1 !== 0) {
+            throw new Error('Price must be a decimal number');
+          }
+        }
+      }
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 10,
+      validate: {
+        isNumeric: {
+          args: true,
+          msg: "Stock must be a numeric value"
+        }
+      }
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'Category', // name of Target model
+        key: 'id', // key in Target model that we're referencing
+      },
+    },
   },
   {
     sequelize,
