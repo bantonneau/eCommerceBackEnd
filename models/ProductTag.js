@@ -13,7 +13,20 @@ ProductTag.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    KEEP GOIN
+    prouduct_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Product', // name of Target model
+        key: 'id', // key in Target model that we're referencing
+      },
+    },
+    tag_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Tag', // name of Target model
+        key: 'id', // key in Target model that we're referencing
+      },
+    }
   },
   {
     sequelize,
