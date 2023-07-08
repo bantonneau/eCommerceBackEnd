@@ -1,5 +1,3 @@
-Sure, I will adapt your template to fit the requirements for this project.
-
 # E-commerce Back End
 
 [![License Badge](https://img.shields.io/badge/License-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
