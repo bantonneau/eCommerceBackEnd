@@ -77,7 +77,7 @@ GitHub: [@bantonneau](https://github.com/bantonneau)
 
 ## Credits
 
-This project was developed by Your Name. The E-commerce Back End leverages the following technologies:
+This project was developed by Ben Antonneau. The E-commerce Back End leverages the following technologies:
 
 - [Express.js](https://expressjs.com/): A fast, unopinionated, minimalist web framework for Node.js.
 - [Sequelize](https://sequelize.org/): A promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server.
